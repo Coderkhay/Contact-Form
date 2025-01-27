@@ -6,30 +6,36 @@
     <title>Contact Form</title>
     <link rel="stylesheet" href="style.css" />
   </head>
-  <body class="bg-green-100 flex items-center justify-center h-[100vh]">
+  <body class="bg-green-100 flex items-center justify-center h-[100vh] relative">
+
     <form
       id="container"
-      class="bg-white w-[500px] h-[510px] box-border p-5 rounded-lg"
+      class="bg-white w-[500px] h-auto box-border p-5 rounded-lg relative"
     >
+    <div id="completionMessage" class="hidden text-xs font-thin bg-green-950 text-white w-[340px] p-5 rounded-md absolute -top-20 left-20">
+      <h3 class="font-bold mb-1"><img src="./img/icon-success-check.svg" class="inline mr-2 w-4">Message sent!</h3>
+    <h6>  Thanks for completing the form. We will be in touch soon!</h6>
+    </div>
+
       <h1 class="font-sans font-semibold text-xl mb-3">Contact Us</h1>
 
       <div id="names" class="flex justify-between mb-3">
         <div id="firstNameContainer">
-          <p class="pb-2">First Name *</p>
+          <p class="pb-2 text-xs">First Name *</p>
           <p>
             <input id="firstName"
               type="text"
-              class="border-solid border-gray-500 border rounded-md w-56 p-1 outline-none"
+              class="text-xs border-solid border-gray-500 border rounded-md w-56 p-1 outline-none"
             />
             <p id="error1" class="text-red-500 text-xs"></p>
           </p>
         </div>
         <div id="lastNameContainer">
-          <p class="pb-2">Last Name*</p>
+          <p class="pb-2 text-xs">Last Name*</p>
           <p>
             <input id="lastName"
               type="text"
-              class="border-solid border-gray-500 border rounded-md w-56 p-1 outline-none"
+              class="text-xs border-solid border-gray-500 border rounded-md w-56 p-1 outline-none"
             />
             <p id="error2" class="text-red-500 text-xs"></p>
           </p>
@@ -37,47 +43,49 @@
       </div>
 
       <div id="emailContainer" class="mb-3">
-        <p class="pb-3">Email Address *</p>
+        <p class="pb-3 text-xs">Email Address *</p>
         <input id="email"
           type="email"
-          class="outline-none border-solid border-gray-500 border rounded-md w-[460px] p-1"
+          class="text-xs outline-none border-solid border-gray-500 border rounded-md w-[460px] p-1"
         />
         <p id="emailError" class="text-red-500 text-xs" ></p>
       </div>
 
       <div id="query" class="mb-3">
-        <p class="pb-3">Query Type *</p>
+        <p class="pb-3 text-xs">Query Type *</p>
         <div id="box" class="flex justify-between">
           <p id='radio1Container' class="border-solid border-gray-500 border rounded-md p-1 w-56">
-            <input id="radio1" type="radio" class="mr-3 ml-3" /><span
-              >General Enquiry</span
-            >
+            <input id="radio1" type="radio" class="mr-3 ml-3" /><span class="text-xs"
+              >General Enquiry</span>
           </p>
           <p id='radio2Container' class="border-solid border-gray-500 border rounded-md p-1 w-56">
-            <input id="radio2" type="radio" class="mr-3 ml-3" /><span
+            <input id="radio2" type="radio" class="mr-3 ml-3" /><span class="text-xs"
               >Support Request</span
             >
           </p>
         </div>
+        <p id="queryError" class="text-red-500 text-xs" ></p>
       </div>
 
       <div id="sms" class="mb-3">
-        <p class="pb-3">Message *</p>
+        <p class="pb-3 text-xs">Message *</p>
         <input
           id="message"
           type="text"
           max="500"
-          class="bg-white border-solid border-gray-500 border rounded-md p-5 outline-none w-[460px]"
+          class="text-xs bg-white border-solid border-gray-500 border rounded-md p-5 outline-none w-[460px]"
         />
+        <p id="smsError" class="text-red-500 text-xs" ></p>
       </div>
 
-      <div id="click">
-        <input id="check" type="checkbox" class="mr-3 mb-5" />
-        <span>I consent to being contacted by the team</span>
+      <div id="click" class=" mb-4">
+        <input id="check" type="checkbox" class="mr-2" />
+        <span class="text-xs">I consent to being contacted by the team</span>
+        <p id="clickError" class="text-red-500 text-xs mb-3" ></p>
       </div>
 
       <div id="submit">
-        <button class="bg-green-800 p-1 w-[460px] text-white rounded-md">
+        <button class="bg-green-800 p-2 w-[460px] text-white text-xs rounded-md">
           Submit
         </button>
       </div>
