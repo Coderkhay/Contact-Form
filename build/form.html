@@ -6,5 +6,73 @@
     <title>Contact Form</title>
     <link rel="stylesheet" href="style.css" />
   </head>
-  <body class="bg-black"></body>
+  <body class="bg-green-100 flex items-center justify-center h-[100vh]">
+    <form
+      id="container"
+      class="bg-white w-[500px] h-[510px] box-border p-5 rounded-lg"
+    >
+      <h1 class="font-sans font-semibold text-xl mb-3">Contact Us</h1>
+
+      <div id="names" class="flex justify-between mb-3">
+        <div id="firstName">
+          <p class="pb-2">First Name *</p>
+          <p>
+            <input
+              type="text"
+              class="border-solid border-gray-500 border rounded-md w-56 p-1 outline-none"
+            />
+          </p>
+        </div>
+        <div id="lastName">
+          <p class="pb-2">Last Name*</p>
+          <p>
+            <input
+              type="text"
+              class="border-solid border-gray-500 border rounded-md w-56 p-1 outline-none"
+            />
+          </p>
+        </div>
+      </div>
+
+      <div id="email" class="mb-3">
+        <p class="pb-3">Email Address *</p>
+        <input
+          type="email"
+          class="border-solid border-gray-500 border rounded-md w-[460px] p-1"
+        />
+      </div>
+
+      <div id="query" class="mb-3">
+        <p class="pb-3">Query Type *</p>
+        <div id="box" class="flex justify-between">
+          <p class="border-solid border-gray-500 border rounded-md p-1 w-56">
+            <input type="radio" class="mr-3 ml-3" /><span>General Enquiry</span>
+          </p>
+          <p class="border-solid border-gray-500 border rounded-md p-1 w-56">
+            <input type="radio" class="mr-3 ml-3" /><span>Support Request</span>
+          </p>
+        </div>
+      </div>
+
+      <div id="message" class="mb-3">
+        <p class="pb-3">Message *</p>
+        <input
+          type="text"
+          max="500"
+          class="bg-white border-solid border-gray-500 border rounded-md p-5 outline-none w-[460px]"
+        />
+      </div>
+
+      <div id="click">
+        <input type="checkbox" class="mr-3 mb-5" />
+        <span>I consent to being contacted by the team</span>
+      </div>
+
+      <div id="submit">
+        <button class="bg-green-800 p-1 w-[460px] text-white rounded-md">
+          Submit
+        </button>
+      </div>
+    </form>
+  </body>
 </html>
